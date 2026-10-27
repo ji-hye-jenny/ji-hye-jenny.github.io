@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Notepad</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Simple Notepad</h1>
+        <p>A modern, lightweight notepad application.</p>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <form id="note-form" action="#" method="post">
+                <fieldset>
+                    <legend>Create a Note</legend>
+
+                    <p>
+                        <label for="note-title"><strong>Title:</strong></label><br>
+                        <input type="text" id="note-title" name="note-title" size="40" placeholder="Enter title here..." required>
+                    </p>
+
+                    <p>
+                        <label for="note-category"><strong>Category:</strong></label><br>
+                        <select id="note-category" name="note-category">
+                            <option value="general">General</option>
+                            <option value="personal">Personal</option>
+                            <option value="work">Work</option>
+                            <option value="ideas">Ideas</option>
+                            <option value="todo">To-Do</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="note-content"><strong>Content:</strong></label><br>
+                        <textarea id="note-content" name="note-content" rows="12" cols="50" placeholder="Write your note here..." required></textarea>
+                    </p>
+
+                    <p>
+                        <button type="submit">Save Note</button>
+                        <button type="reset">Reset</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Recent Notes <span id="notes-count"></span></h2>
+            <div id="notes-container"></div>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p><small>&copy; 2026 Simple Notepad. Built with HTML, CSS &amp; JavaScript.</small></p>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>
